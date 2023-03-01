@@ -1,0 +1,22 @@
+<!-- pets/templates/pets/pet_list.html -->
+
+
+{% extends "pets/base.html" %}
+
+
+{% block content %}
+
+    <h2>
+
+        All Pets
+
+    </h2>
+    
+    {% for pet in pet_list %}
+        {% ifchanged %}
+            <h3>🗃 {{ pet.species.name }}s </h3>
+        {% endifchanged %}
+        {% include "pets/pet.html" %}
+    {% endfor %}
+
+{% endblock content %}
