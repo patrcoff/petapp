@@ -35,4 +35,86 @@ Potential future versions functionalities:
     - log treats
     - suggest nutritional advice
 - add a general budgeting portion of the app which logs all pet based spending 
+- pet birthdays
+- tasteful handling of pet deaths
+- pet relationships (i.e. parents, siblings etc)
 - 
+
+Version 1.0
+===========
+
+Data:
+
+Users
+    username
+    email
+    fullnames
+    (do we really need any further PII? I would prefer to minimise this at this time as I'm not in the business of selling data)
+
+Pets
+    Species
+        Breeds
+    Name
+    Age
+    Colour
+    Description
+    sizes
+    weight
+    Conditions
+    Other medical notes
+    pictures
+
+    all of the above about specific pets
+
+    general metadata of some of the above about the species and breeds, obtained from some external data source(s)
+
+Medications
+    brand
+    name
+    type
+    description
+    active ingredient(s)
+    dosage qty
+    dosage unit
+    active ingredient units per dosage
+
+Actions
+    schedules
+    dosage to pet links
+    log events
+    share history (report for vets)
+    calendar sync with google calendar etc (this may be handled at frontend)
+    set reminders
+
+
+
+
+Example pets to prompt thoughts on the data structures needed to encompase a wide variety of animals
+
+Oliver, dog, setter/retriever cross, 17.6kg, 1 year old, ginger, 
+    flea and tic treatment, 15ml drops, apply on back of neck, monthly, 3 in stock, next applied 30th March
+    wormer, pill, note:give burried in food, unit: each, 1, 5 in stock, next applied 30th March
+
+Jeffry, fish, clownfish, 15cm, 3 years old, orange, 
+    anti-fish-mite treatment, drops, 1ml, monthly, apply to tank, 2 in stock, next applied 30th March
+
+Bird
+
+Cat
+
+Reptile
+
+
+
+External functions examples:
+    stock of superpetdrug x: 10 units, next application 30th march, doses to be applied on next application, 7, remaining stock after next application: 3, to purchase: before 30th April, auto-reminder: true
+
+
+
+
+
+tables:
+
+SPECIES: ID, SPECIES_NAME, DESCRIPTION, AVERAGE_LIFE_SPAN, AVERAGE_SIZE, AVERAGE_WEIGHT
+
+BREED: ID, SPECIES_ID, BREED_NAME, AVERAGE_LIFE_SPAN, AVERAGE_SIZE, AVERAGE_WEIGHT
